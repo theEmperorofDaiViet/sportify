@@ -80,10 +80,10 @@ CREATE TABLE Product(
 );
 
 INSERT INTO Product VALUES 
-  ('1', 'FWC10', 'FIFA World Cup South Africa 2010 (Official Soundtrack)', '14.95'),
-  ('2', 'FWC14', 'FIFA World Cup Brazil 2014 (Official Soundtrack)', '12.95'),
-  ('3', 'FWC18', 'FIFA World Cup Russia 2018 (Official Soundtrack)', '14.95'),
-  ('4', 'FWC22', 'FIFA World Cup Qatar 2022 (Official Soundtrack)', '14.95');
+  ('1', 'FWC10', 'Various Artists - FIFA World Cup South Africa 2010 (Official Soundtrack)', '14.95'),
+  ('2', 'FWC14', 'Various Artists - FIFA World Cup Brazil 2014 (Official Soundtrack)', '12.95'),
+  ('3', 'FWC18', 'Various Artists - FIFA World Cup Russia 2018 (Official Soundtrack)', '14.95'),
+  ('4', 'FWC22', 'Various Artists - FIFA World Cup Qatar 2022 (Official Soundtrack)', '14.95');
   
 CREATE TABLE Download (
     DownloadID INT NOT NULL AUTO_INCREMENT,

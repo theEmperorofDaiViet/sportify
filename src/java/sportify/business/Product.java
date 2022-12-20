@@ -48,7 +48,7 @@ public class Product implements Serializable{
     }
     
     public String getAlbumName(){
-        String albumName = description.substring(description.indexOf(" - " + 3));
+        String albumName = description.substring(description.indexOf(" - ") + 3);
         return albumName;
     }
 
