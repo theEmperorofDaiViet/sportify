@@ -244,13 +244,13 @@ aside img {
 #sidebarA { 
     width: 180px; 
     float: left; 
-    height: 400px;
+    height: 600px;
     border-right: 2px solid #ef9c00;
 }
-#sidebarB { 
+#sidebarB {
     width: 180px; 
     float: right; 
-    height: 400px;
+    height: 600px;
     padding-left: 20px;
     border-left: 2px solid #ef9c00;
 }

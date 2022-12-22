@@ -5,10 +5,6 @@
         <group>
             <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/web/includes/header.jsp</file>
             <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/web/styles/main.css</file>
-            <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/src/java/sportify/data/InvoiceDB.java</file>
-            <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/src/java/sportify/data/LineItemDB.java</file>
-            <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/src/java/sportify/business/Product.java</file>
-            <file>file:/G:/Workspace/Code%20Studio/NetBeansProjects/sportify/src/java/sportify/controllers/CatalogController.java</file>
         </group>
     </open-files>
 </project-private>
