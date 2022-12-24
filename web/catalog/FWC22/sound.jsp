@@ -4,6 +4,7 @@
     Author     : Admin
 --%>
 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:include page="/includes/header.jsp" />
 <jsp:include page="/includes/column_left_all.jsp" />
 
@@ -12,7 +13,7 @@
 
     <jsp:include page="/includes/product_table.jsp" />
 
-    <p class="clear_both">To listen to a track, click on the song's link.</p>
+    <p class="clear_both">To listen to a track, click on the song's name.</p>
 
     <p>1. <a href="/sportify/sound/FWC22/The Official FIFA World Cup Qatar 2022 Theme.mp3">The Official FIFA World Cup Qatar 2022 Theme</a><br/>
           &emsp;&nbsp;<small><i>FIFA Sound</i></small></p>
@@ -29,7 +30,7 @@
     <p>7. The World Is Yours To Take - Budweiser Anthem of the FIFA World Cup 2022<br/>
           &emsp;&nbsp;<small><i>Tears For Fears, Lil Baby</i></small></p>
     <p>8. <a href="/sportify/sound/FWC22/The Business.mp3">The Business - Official FIFA World Cup Qatar 2022 Pre-Match Anthem</a><br/>
-          &emsp;&nbsp;<small><i>Tiësto</i></small></p>
+          &emsp;&nbsp;<small><i>TiÃ«sto</i></small></p>
     <p>9. <a href="/sportify/sound/FWC22/Arhbo - FIFA Walkout Anthem.mp3">Arhbo - FIFA Walkout Anthem</a><br/>
           &emsp;&nbsp;<small><i>Ozuna, GIMS</i></small></p>
 

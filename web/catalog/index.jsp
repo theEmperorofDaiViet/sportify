@@ -14,9 +14,6 @@
 <section>
     <h1>The Sportify Catalog</h1>
 
-    <h2>UEFA EURO</h2>
-    <p><a href="product/8601">UEFA EURO 2020</a></p>
-
     <h2 class="top_margin">FIFA World Cup</h2>
     <p><a href="product/FWC10">FIFA World Cup South Africa 2010 (Official Soundtrack)</a></p>
     <p><a href="product/FWC14">FIFA World Cup Brazil 2014 (Official Soundtrack)</a></p>

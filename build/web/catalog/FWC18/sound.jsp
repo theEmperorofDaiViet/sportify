@@ -4,6 +4,7 @@
     Author     : Admin
 --%>
 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:include page="/includes/header.jsp" />
 <jsp:include page="/includes/column_left_all.jsp" />
 
@@ -12,17 +13,17 @@
 
     <jsp:include page="/includes/product_table.jsp" />
 
-    <p class="clear_both">To listen to a track, click on the song's link.</p>
+    <p class="clear_both">To listen to a track, click on the song's name.</p>
 
     <p>1. <a href="/sportify/sound/FWC18/Living Football.mp3">Living Football (Official FIFA Theme)</a><br/>
           &emsp;&nbsp;<small><i>Hans Zimmer, Lorne Balfe</i></small></p>
     <p>2. <a href="/sportify/sound/FWC18/Live It Up.mp3">Live It Up (Official Song 2018 FIFA World Cup Russia)</a><br/>
           &emsp;&nbsp;<small><i>Nicky Jam, Will Smith, Era Istrefi</i></small></p>
-    <p>3. <a href="/sportify/sound/FWC18/??????? 2018.mp3">??????? 2018</a><br/>
+    <p>3. <a href="/sportify/sound/FWC18/Команда 2018.mp3">Команда 2018</a><br/>
           &emsp;&nbsp;<small><i>DJ SMASH, Polina Gagarina, Egor Kreeda</i></small></p>    
-    <p>4. <a href="/sportify/sound/FWC18/The Business.mp3">Seven Nation Army - Official FIFA World Cup Qatar 2018 Pre-Match Anthem</a><br/>
+    <p>4. <a href="/sportify/sound/FWC18/The Business.mp3">Seven Nation Army - FIFA World Cup Russia 2018 Pre-Match Anthem</a><br/>
           &emsp;&nbsp;<small><i>The White Stripes</i></small></p>
-    <p>5. <a href="/sportify/sound/FWC18/Colors.mp3">Colors (Coca-Cola Anthem for the 2018 FIFA World Cup)</a><br/>
+    <p>5. Colors (Coca-Cola Anthem for the 2018 FIFA World Cup)<br/>
           &emsp;&nbsp;<small><i>Jason Derulo</i></small></p>
 
 </section>
