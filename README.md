@@ -16,35 +16,43 @@
         <li><a href="#installation">Installation</a></li>
       </ul>
     </li>
-    <li><a href="#api-documentation">API Documentation</li>
+    <li><a href="#key-features">Key Features</li>
     <li><a href="#usage">Usage</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
 
+<p align="center">
+    <img src="/web/images/logo.png" width="128" height="128">
+</p>
 
 # About The Project
-A simple music store website project inspired by the spirit of the FIFA World Cup Qatar 2022™.
+A simple music store website project to celebrate the FIFA World Cup Qatar 2022™, inspired by the book "Murach's Java Servlets & JSP".
 
 ## Built With
-* [![Java][Java-shield]][Java-url]: &nbsp; <font size=4>Servlet & JSP</font>
+* [![Java][Java-shield]][Java-url]:&nbsp;<font size=4>Servlet & JSP</font>
 * [![Apache Ant][Apache Ant-shield]][Apache Ant-url]
 * [![Apache Tomcat][Apache Tomcat-shield]][Apache Tomcat-url]
 * [![HTML5][HTML5-shield]][HTML5-url]
 * [![CSS3][CSS3-shield]][CSS3-url]
-
+* [![MySQL][MySQL-shield]][MySQL-url]
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Getting Started
 
 ## Prerequisites
+Before cloning and using this application, you'll need to install these things on your computer:
+* [Java SE Development Kit 17](https://www.oracle.com/java/technologies/downloads/#java17): Of course you need to have Java installed to run a Java application. I used Java 17, but I think it works fine with the widely-used Java 8 (JDK 1.8), as well.
+* [Apache NetBeans](https://netbeans.apache.org/): a free, open source, integrated development environment (IDE) that enables you to develop desktop, mobile and web applications. The IDE supports application development in various languages, including Java, HTML5, PHP and C++. The IDE provides integrated support for the complete development cycle, from project creation through debugging, profiling and deployment. The IDE runs on Windows, Linux, Mac OS X, and other UNIX-based systems.
+* [Apache Tomcat](https://tomcat.apache.org/): an open-source Java servlet container that implements many Java Enterprise Specs such as the Websites API, Java-Server Pages and last but not least, the Java Servlet.
+* [MySQL 8.0](https://dev.mysql.com/downloads/installer/): an open source relational database management system that was originally released in 1995. MySQL is popular among all databases, and is ranked as the 2nd most popular database, only slightly trailing Oracle Database. Among open source databases, MySQL is the most popular database in use today and known as one of the most reliable and performative databases out there.
 
 ## Installation
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-# API Documentation
+# Key Features
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -76,6 +84,8 @@ You can contact me via:
 [HTML5-url]: https://www.w3.org/html/
 [CSS3-shield]: https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white
 [CSS3-url]: https://www.w3.org/Style/CSS/
+[MySQL-shield]: https://img.shields.io/badge/MySQL-005C84?style=for-the-badge&logo=mysql&logoColor=white
+[MySQL-url]: https://www.mysql.com/
 <!-- Contact -->
 [GitHub-shield]: https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white
 [GitHub-url]: https://github.com/theEmperorofDaiViet
