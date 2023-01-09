@@ -65,7 +65,7 @@ Back to NetBeans and run the application. If this is the first time you use Tomc
 
 Finally, if NetBeans asks for Tomcat authentication, open the tomcat-users.xml file in the [/conf](/) folder under the Tomcat directory to see the username and password. You can change them if you want.
 
-After that, the application will running on port 8080 by default. A new tab in your browser will be opened automatically, showing the home page of the application, or at least I hope so...
+After that, the application will run on port 8080 by default. A new tab in your browser will be opened automatically, showing the home page of the application, or at least I hope so...
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
