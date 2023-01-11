@@ -79,6 +79,14 @@ After that, the application will run on port 8080 by default. A new tab in your 
 - Delete Cookies: click the Delete Cookies link in the navigation bar, close the browser, and run the application again
 - Work with database by JDBC
 
+## 2. End Users:
+- Verify the user by cookies:
+  - If the user has already registered, he/she can listen and download songs, place an order for physical albums.
+  - Otherwise, the application forward to a register page, but different from the one in home page: if the user enter an existing email address, the application consider it as an update to the existing one, and use it as the user of the current session - instead of forcing the user to enter a different email address.
+- Listen & download songs (if the user has already registered)
+- Cart: add an item to cart, change its quantity, remove it.
+- Order (if the user has already registered): verify order information, pay by credit card and submit the order.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Usage
