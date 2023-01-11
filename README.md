@@ -71,6 +71,14 @@ After that, the application will run on port 8080 by default. A new tab in your 
 
 # Key Features
 
+## 1. Overview
+- Browse products and view the details of any product
+- Listen, download songs
+- Add to cart and order for the whole (physical) album
+- Register (Join Email List) by entering a name and email address
+- Delete Cookies: click the Delete Cookies link in the navigation bar, close the browser, and run the application again
+- Work with database by JDBC
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Usage
