@@ -87,6 +87,13 @@ After that, the application will run on port 8080 by default. A new tab in your 
 - Cart: add an item to cart, change its quantity, remove it.
 - Order (if the user has already registered): verify order information, pay by credit card and submit the order.
 
+## 3. Administrators:
+- Restrict access to all URLs in the admin directory. User must specify a valid username and password (I provided 3 admin accounts in the script.sql file).
+- Process Invoices: view a list of unprocessed invoices, view the details of any unprocessed invoice and process the invoice.
+- Display Reports: 2 types of report:
+  - User Email Report: the application downloads an .xls file for the report. You can open that file using Microsoft Excel.
+  - Downloads Report: the application displays the parameters page. This page lets the user enter a start date and end date for the report. Once the user enters those dates and clicks the Continue button, the application downloads an .xls file for the report.
+
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Usage
