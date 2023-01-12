@@ -100,7 +100,7 @@ After that, the application will run on port 8080 by default. A new tab in your 
 <i>Here are examples to illustrate the features of this application:</i>
 
 ## 1. End Users:
-This is an example for end users:
+<i>This is an example for end users:</i>
 
 <p align="center">
     <img src="/web/images/animation-1.gif">
@@ -133,6 +133,31 @@ This is an example for end users:
 - The application displays a notification that all cookies have been removed.
 - The user closes the browser and then runs the application again.
 - Now, to listen, download songs and place an order, the user needs to register again!
+
+## 2. Administrators:
+<i>This is an example for administrators:</i>
+
+<p align="center">
+    <img src="/web/images/animation-2.gif">
+</p>
+
+### Log in:
+- First, from the home page, the admin clicks the Admin link in the navigation bar.
+- The admin login page is displayed. The admin enters a valid username and password, then clicks "Log in".
+- Finally, the application displays the admin menu page. From this page, the "Process Invoices" button leads to the Process Invoices application, and the "Display Reports" button leads to the Report application.
+
+### Process Invoices:
+- First, from the admin menu page, the admin clicks the "Process Invoices" button.
+- The invoices page is displayed. From this page, the admin can view a list of unprocessed invoices.
+- Then, to view the details of any unprocessed invoice, the admin clicks the link for the invoice to display its invoice page.
+- After seeing the details of that invoice, the admin determines that the invoice is valid. He/she processes the invoice by clicking the "Process Invoice" button.
+- Finally, the application processes the invoice and returns to the invoices page. Once the application processes an invoice, it doesn't display it on this page anymore.
+
+### Display Reports:
+- First, from the admin menu page, the admin clicks the "Display Reports" button.
+- The application displays the reports page, showing a list of available reports: there are 2 types of report:
+  - User Email Report: If the admin selects this report, the application downloads an .xls file named "userEmail.xls" for the report. The browser shows a button to open that file. In this example, the file is opened by Microsoft Excel.
+  - Downloads Report: If the admin selects this report, the application displays the parameters page. This page lets the admin enter a start date and end date for the report. Once the admin enters those dates and clicks the "Continue" button, the application downloads an .xls file named "downloadDetail.xls" for the report. Again, this allows the admin to open and view the report by any spreadsheet application, including Microsoft Excel.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
