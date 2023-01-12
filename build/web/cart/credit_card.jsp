@@ -4,6 +4,7 @@
     Author     : Admin
 --%>
 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:include page="/includes/header.jsp" />
 <%-- Use the following left column instead after you configure a 
      secure connection as described in chapter 15.

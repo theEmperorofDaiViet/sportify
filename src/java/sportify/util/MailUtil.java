@@ -43,6 +43,11 @@ public class MailUtil {
         message.setRecipient(Message.RecipientType.TO, toAddress);
 
         // 4 - send the message
-        Transport.send(message);
+//        Transport.send(message);
+        
+        Transport transport = session.getTransport("smtps");
+        transport.connect();
+        transport.sendMessage(message, message.getAllRecipients());
+
     }    
 }

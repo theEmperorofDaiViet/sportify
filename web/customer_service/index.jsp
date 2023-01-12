@@ -4,6 +4,7 @@
     Author     : Admin
 --%>
 
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
 <jsp:include page="/includes/header.jsp" />
 <jsp:include page="/includes/column_left_cust_serv.jsp" />
 
