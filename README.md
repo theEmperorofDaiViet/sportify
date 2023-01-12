@@ -97,6 +97,42 @@ After that, the application will run on port 8080 by default. A new tab in your 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 # Usage
+<i>Here are examples to illustrate the features of this application:</i>
+
+## 1. End Users:
+This is an example for end users:
+
+<p align="center">
+    <img src="/web/images/animation-1.gif">
+</p>
+
+### Browse products; listen, download songs; add items to cart and place an order:
+- First, from the home page, the user clicks "Browse Catalog" to browse products.
+- The user chooses an album, clicks the "Play" button to see the album's tracks list.
+- Because the user hasn't registered, the application displays an register page. The user enters email address, first name and last name to register.
+- Now, the tracks list is displayed. The user clicks on a track's name to play or download the tracks, if he/she wants.
+- Then, the user clicks the "Add to Cart" button to add the album to cart.
+- The cart page is displayed, the user clicks the "Continue Shopping" button to browse for more products.
+- The user chooses another album, add it to cart.
+- The application displays the cart page again. The user updates quantity of the first album from "1" to "2".
+- The user clicks the "Checkout" button to finish shopping and make an order of the albums in cart.
+- The invoice page is displayed, shows the user order information. The user confirms the information by clicking "Continue".
+- The application displays the credit card page to ask the user to enter credit card information for payment.
+- The user provides information and clicks "Submit Order".
+- Finally, the application displays a notification that the order is submitted and expresses gratitude to the user.
+
+### Register (Join Email List):
+- First, from the home page, the user clicks "Join Email List" to register.
+- The register page is displayed. The user enters email address, first name and last name to register.
+- But that email address already exists. The application notifies the user and asks he/she to provide another one.
+- The user provides suitable information and clicks "Join Now".
+- Finally, the application displays a notification that the user joined successfully and expresses gratitude to the user.
+
+### Delete Cookies:
+- First, from the home page, the user clicks the Delete Cookies link in the navigation bar.
+- The application displays a notification that all cookies have been removed.
+- The user closes the browser and then runs the application again.
+- Now, to listen, download songs and place an order, the user needs to register again!
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
