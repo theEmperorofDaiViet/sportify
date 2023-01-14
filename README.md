@@ -57,6 +57,8 @@ After cloning the repository, you can open the project by NetBeans.
 
 Add necessary libraries to the project by right-clicking on the Libraries folder, select the Add JAR/Folder command, and navigate to [/web/lib](/web/lib), then select all jar files inside it. I stored all the libraries needed for the project in this folder.
 
+> :pushpin: **If you are using JPA Version**: You also need to add a JPA library to the project: Right-click on the project's Libraries folder, select the Add Library command, and select the EclipseLink library in the resulting dialog box.
+
 Open the context.xml file in [/web/META-INF](/web/META-INF) to change the information about the datasource to fit your own settings.
 
 Open MySQL and create two databases according to the script in script.sql file in [/](/).
@@ -77,7 +79,7 @@ After that, the application will run on port 8080 by default. A new tab in your 
 - Add to cart and order for the whole (physical) album
 - Register (Join Email List) by entering a name and email address
 - Delete Cookies: click the Delete Cookies link in the navigation bar, close the browser, and run the application again
-- Work with database by JDBC
+- Work with database by JPA (and JDBC - in the previous version)
 
 ## 2. End Users:
 - Verify the user by cookies:

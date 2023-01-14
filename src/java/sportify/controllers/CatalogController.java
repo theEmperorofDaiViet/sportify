@@ -111,6 +111,8 @@ public class CatalogController extends HttpServlet {
         user.setLastName(lastName);
         user.setEmail(email);
         if (UserDB.emailExists(email)) {
+            Long id = UserDB.selectUser(email).getId();
+            user.setId(id);
             UserDB.update(user);
         } else {
             UserDB.insert(user);
