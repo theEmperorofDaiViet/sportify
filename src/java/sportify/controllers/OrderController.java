@@ -184,30 +184,20 @@ public class OrderController extends HttpServlet {
             user = new User();
         }
 
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setEmail(email);
+        user.setCompanyName(companyName);
+        user.setAddress1(address1);
+        user.setAddress2(address2);
+        user.setCity(city);
+        user.setState(state);
+        user.setZip(zip);
+        user.setCountry(country);
+        
         if (UserDB.emailExists(email)) {
-            user = UserDB.selectUser(email);
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setEmail(email);
-            user.setCompanyName(companyName);
-            user.setAddress1(address1);
-            user.setAddress2(address2);
-            user.setCity(city);
-            user.setState(state);
-            user.setZip(zip);
-            user.setCountry(country);            
             UserDB.update(user);
         } else {
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setEmail(email);
-            user.setCompanyName(companyName);
-            user.setAddress1(address1);
-            user.setAddress2(address2);
-            user.setCity(city);
-            user.setState(state);
-            user.setZip(zip);
-            user.setCountry(country);
             UserDB.insert(user);
         }
 
@@ -239,6 +229,7 @@ public class OrderController extends HttpServlet {
             HttpServletResponse response) {
 
         HttpSession session = request.getSession();
+        User user = (User)session.getAttribute("user");        
         Invoice invoice = (Invoice) session.getAttribute("invoice");
 
         String creditCardType = 
@@ -250,7 +241,6 @@ public class OrderController extends HttpServlet {
         String creditCardExpYear = 
                 request.getParameter("creditCardExpirationYear");
 
-        User user = invoice.getUser();
         user.setCreditCardType(creditCardType);
         user.setCreditCardNumber(creditCardNumber);
         user.setCreditCardExpirationDate(creditCardExpMonth
@@ -261,8 +251,7 @@ public class OrderController extends HttpServlet {
             UserDB.update(user);
         } else { // otherwise, write a new record for the user            
             UserDB.insert(user);
-        }        
-        invoice.setUser(user);
+        }
         
         // write a new invoice record
         InvoiceDB.insert(invoice);

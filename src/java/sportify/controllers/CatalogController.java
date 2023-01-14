@@ -106,18 +106,13 @@ public class CatalogController extends HttpServlet {
         String lastName = request.getParameter("lastName");
         String email = request.getParameter("email");
 
-        User user;
+        User user = new User();
+        user.setFirstName(firstName);
+        user.setLastName(lastName);
+        user.setEmail(email);
         if (UserDB.emailExists(email)) {
-            user = UserDB.selectUser(email);
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setEmail(email);            
             UserDB.update(user);
         } else {
-            user = new User();
-            user.setFirstName(firstName);
-            user.setLastName(lastName);
-            user.setEmail(email);            
             UserDB.insert(user);
         }
 

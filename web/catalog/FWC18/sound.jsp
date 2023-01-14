@@ -15,13 +15,13 @@
 
     <p class="clear_both">To listen to a track, click on the song's name.</p>
 
-    <p>1. <a href="/sportify/sound/FWC18/Living Football.mp3">Living Football (Official FIFA Theme)</a><br/>
+    <p>1. <a href="/sportifyJPA/sound/FWC18/Living Football.mp3">Living Football (Official FIFA Theme)</a><br/>
           &emsp;&nbsp;<small><i>Hans Zimmer, Lorne Balfe</i></small></p>
-    <p>2. <a href="/sportify/sound/FWC18/Live It Up.mp3">Live It Up (Official Song 2018 FIFA World Cup Russia)</a><br/>
+    <p>2. <a href="/sportifyJPA/sound/FWC18/Live It Up.mp3">Live It Up (Official Song 2018 FIFA World Cup Russia)</a><br/>
           &emsp;&nbsp;<small><i>Nicky Jam, Will Smith, Era Istrefi</i></small></p>
-    <p>3. <a href="/sportify/sound/FWC18/Команда 2018.mp3">Команда 2018</a><br/>
+    <p>3. <a href="/sportifyJPA/sound/FWC18/Команда 2018.mp3">Команда 2018</a><br/>
           &emsp;&nbsp;<small><i>DJ SMASH, Polina Gagarina, Egor Kreed</i></small></p>    
-    <p>4. <a href="/sportify/sound/FWC18/Seven Nation Army.mp3">Seven Nation Army - FIFA World Cup Russia 2018 Pre-Match Anthem</a><br/>
+    <p>4. <a href="/sportifyJPA/sound/FWC18/Seven Nation Army.mp3">Seven Nation Army - FIFA World Cup Russia 2018 Pre-Match Anthem</a><br/>
           &emsp;&nbsp;<small><i>The White Stripes</i></small></p>
     <p>5. Colors (Coca-Cola Anthem for the 2018 FIFA World Cup)<br/>
           &emsp;&nbsp;<small><i>Jason Derulo</i></small></p>

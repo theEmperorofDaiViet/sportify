@@ -6,13 +6,20 @@ package sportify.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
 /**
  *
  * @author Admin
  */
+@Entity
 public class Product implements Serializable{
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long productID;
     private String code;
     private String description;
@@ -66,7 +73,7 @@ public class Product implements Serializable{
     }
     
     public String getImageURL(){
-        String imageURL = "/sportify/images/" + code + "_cover.jpg";
+        String imageURL = "/sportifyJPA/images/" + code + "_cover.jpg";
         return imageURL;
     }
     

@@ -7,17 +7,37 @@ package sportify.business;
 import java.util.*;
 import java.text.*;
 import java.io.Serializable;
+import javax.persistence.CascadeType;
+import javax.persistence.Entity;
+import static javax.persistence.FetchType.EAGER;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
 
 /**
  *
  * @author Admin
  */
+@Entity
 public class Invoice implements Serializable{
     
+    @ManyToOne
     private User user;
+    
+    @OneToMany(fetch = EAGER, cascade = CascadeType.PERSIST)
     private List<LineItem> lineItems;
+    
+    @Temporal(TemporalType.DATE)
     private Date invoiceDate;
+    
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long invoiceNumber;
+    
     private boolean isProcessed;
 
     public Invoice() {

@@ -4,7 +4,9 @@
  */
 package sportify.data;
 
-import java.sql.*;
+import javax.persistence.EntityManager;
+import javax.persistence.EntityTransaction;
+
 import sportify.business.*;
 
 /**
@@ -13,28 +15,18 @@ import sportify.business.*;
  */
 public class DownloadDB {
 
-    public static long insert(Download download) {
-        ConnectionPool pool = ConnectionPool.getInstance();
-        Connection connection = pool.getConnection();
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        String query = "INSERT INTO Download "
-                + "(UserID, DownloadDate, ProductCode) "
-                + "VALUES "
-                + "(?, NOW(), ?)";
+    public static void insert(Download download) {
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        EntityTransaction trans = em.getTransaction();
+        trans.begin();
         try {
-            ps = connection.prepareStatement(query);
-            ps.setLong(1, download.getUser().getId());
-            ps.setString(2, download.getProductCode());
-            return ps.executeUpdate();
-        } catch (SQLException e) {
-            System.err.println(e);
-            return 0;
+            em.persist(download);
+            trans.commit();
+        } catch(Exception e) {
+            System.out.println(e);
+            trans.rollback();
         } finally {
-            DBUtil.closeResultSet(rs);
-            DBUtil.closePreparedStatement(ps);
-            pool.freeConnection(connection);
+            em.close();
         }
     }    
 }

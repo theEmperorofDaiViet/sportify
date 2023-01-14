@@ -4,8 +4,11 @@
  */
 package sportify.data;
 
-import java.sql.*;
-import java.util.*;
+import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.NoResultException;
+import javax.persistence.TypedQuery;
+
 import sportify.business.*;
 
 /**
@@ -16,97 +19,41 @@ public class ProductDB {
     
     //This method returns null if a product isn't found.
     public static Product selectProduct(String productCode) {
-        ConnectionPool pool = ConnectionPool.getInstance();
-        Connection connection = pool.getConnection();
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        String query = "SELECT * FROM Product "
-                + "WHERE ProductCode = ?";
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT p FROM Product p " + "WHERE p.code = :code";
+        TypedQuery<Product> q = em.createQuery(qString, Product.class);
+        q.setParameter("code", productCode);
+        Product result = null;
         try {
-            ps = connection.prepareStatement(query);
-            ps.setString(1, productCode);
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                Product p = new Product();
-                p.setProductID(rs.getLong("ProductID"));
-                p.setCode(rs.getString("ProductCode"));
-                p.setDescription(rs.getString("ProductDescription"));
-                p.setPrice(rs.getDouble("ProductPrice"));
-                return p;
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            System.err.println(e);
+            result = q.getSingleResult();
+        } catch (NoResultException ex) {
             return null;
         } finally {
-            DBUtil.closeResultSet(rs);
-            DBUtil.closePreparedStatement(ps);
-            pool.freeConnection(connection);
+            em.close();
         }
+        return (Product)result;
     }
     
     //This method returns null if a product isn't found.
     public static Product selectProduct(long productID) {
-        ConnectionPool pool = ConnectionPool.getInstance();
-        Connection connection = pool.getConnection();
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        String query = "SELECT * FROM Product "
-                + "WHERE ProductID = ?";
-        try {
-            ps = connection.prepareStatement(query);
-            ps.setLong(1, productID);
-            rs = ps.executeQuery();
-            if (rs.next()) {
-                Product p = new Product();
-                p.setProductID(rs.getLong("ProductID"));
-                p.setCode(rs.getString("ProductCode"));
-                p.setDescription(rs.getString("ProductDescription"));
-                p.setPrice(rs.getDouble("ProductPrice"));
-                return p;
-            } else {
-                return null;
-            }
-        } catch (SQLException e) {
-            System.err.println(e);
-            return null;
-        } finally {
-            DBUtil.closeResultSet(rs);
-            DBUtil.closePreparedStatement(ps);
-            pool.freeConnection(connection);
-        }
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        
+        return em.find(Product.class, productID);
     }
     
     //This method returns null if a product isn't found.
     public static List<Product> selectProducts() {
-        ConnectionPool pool = ConnectionPool.getInstance();
-        Connection connection = pool.getConnection();
-        PreparedStatement ps = null;
-        ResultSet rs = null;
-
-        String query = "SELECT * FROM Product";
+        EntityManager em = DBUtil.getEmFactory().createEntityManager();
+        String qString = "SELECT p from Product p";
+        TypedQuery<Product> q = em.createQuery(qString, Product.class);
+        List<Product> results = null;
         try {
-            ps = connection.prepareStatement(query);
-            rs = ps.executeQuery();
-            ArrayList<Product> products = new ArrayList<>();
-            while (rs.next()) {
-                Product p = new Product();
-                p.setCode(rs.getString("ProductCode"));
-                p.setDescription(rs.getString("ProductDescription"));
-                p.setPrice(rs.getDouble("ProductPrice"));
-                products.add(p);
-            }
-            return products;
-        } catch (SQLException e) {
-            System.err.println(e);
+            results = q.getResultList();
+        } catch (NoResultException ex) {
             return null;
         } finally {
-            DBUtil.closeResultSet(rs);
-            DBUtil.closePreparedStatement(ps);
-            pool.freeConnection(connection);
-        }
+            em.close();
+        }        
+        return results;
     }
 }

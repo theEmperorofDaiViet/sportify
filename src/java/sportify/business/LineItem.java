@@ -6,15 +6,26 @@ package sportify.business;
 
 import java.io.Serializable;
 import java.text.NumberFormat;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.OneToOne;
 
 /**
  *
  * @author Admin
  */
+@Entity
 public class LineItem implements Serializable{
     
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long lineItemId;
+    
+    @OneToOne
     private Product product;
+    
     private int quantity = 1;
 
     public LineItem() {
