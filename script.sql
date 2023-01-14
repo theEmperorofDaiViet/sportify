@@ -94,3 +94,11 @@ CREATE TABLE Download (
     PRIMARY KEY (DownloadID), 
     FOREIGN KEY (UserID) REFERENCES User (UserID)
 );
+
+/***********************************************************
+* JPA Version
+************************************************************/
+
+CREATE DATABASE if not exists sportifymusic_jpa;
+
+USE sportifymusic_jpa;
