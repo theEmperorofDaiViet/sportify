@@ -57,15 +57,25 @@ After cloning the repository, you can open the project by NetBeans.
 
 Add necessary libraries to the project by right-clicking on the Libraries folder, select the Add JAR/Folder command, and navigate to [/web/lib](/web/lib), then select all jar files inside it. I stored all the libraries needed for the project in this folder.
 
-> :pushpin: **If you are using JPA Version**: You also need to add a JPA library to the project: Right-click on the project's Libraries folder, select the Add Library command, and select the EclipseLink library in the resulting dialog box.
+> :pushpin: **If you are using JPA Version**: You also need to add a JPA library to the project: Right-click on the project's Libraries folder, select the Add Library command, and select the <b>EclipseLin</b> library in the resulting dialog box.
 
-Open the context.xml file in [/web/META-INF](/web/META-INF) to change the information about the datasource to fit your own settings.
+Open MySQL and create two databases according to the script in <b>script.sql</b> file in [/](/).
 
-Open MySQL and create two databases according to the script in script.sql file in [/](/).
+> :pushpin: **If you are using JDBC Version**: create the <b>sportify</b> and <b>sportifymusic</b> database
+
+> :pushpin: **If you are using JPA Version**: create the <b>sportify</b> and <b>sportifymusic_JPA</b> database
+
+Open the <b>context.xml</b> file in [/web/META-INF](/web/META-INF) to change the information about the datasource to fit your own settings.
+
+> :pushpin: **If you are using JPA Version**:
+> + Besides the <b>context.xml</b> file, the JPA Version includes a <b>persistence.xml</b> file in [/src/conf](/src/conf) that defines how JPA connects to the sportifymusic_JPA database.
+> - The fifth property element in <b>persistence.xml</b>, named <code>schema-generation.database.action</code>, tells JPA what it should do when the application starts and encounters entities that don't already have corresponding tables in the database. A value of <code>"create"</code> tells JPA to automatically create tables for the entities, as well as any tables necessary to create relationships between tables. Although this is convenient, it causes the application to pause for a very long time after each start up as JPA examines the entities and database schemas to determine whether it needs to make any changes. Because of that:
+>   - Before the first time you run the application, set the property's value to <code>"create"</code> to create all tables needed, because the <b>sportifymusic_JPA</b> hasn't had any tables.
+>   - After that, set the property's value to <code>"none"</code> to turn off automatic schema generation.
 
 Back to NetBeans and run the application. If this is the first time you use Tomcat, NetBeans may display a dialog asking you to choose a web server for the application. Click "Add" and refer to the directory where Tomcat installed.
 
-Finally, if NetBeans asks for Tomcat authentication, open the tomcat-users.xml file in the [/conf](/) folder under the Tomcat directory to see the username and password. You can change them if you want.
+Finally, if NetBeans asks for Tomcat authentication, open the <b>tomcat-users.xml</b> file in the [/conf](/) folder under the Tomcat directory to see the username and password. You can change them if you want.
 
 After that, the application will run on port 8080 by default. A new tab in your browser will be opened automatically, showing the home page of the application, or at least I hope so...
 
